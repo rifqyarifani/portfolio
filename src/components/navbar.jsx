@@ -10,6 +10,7 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false) 
   function handleClick(){
     setToggle(toggle? false : true)
+    console.log(toggle)
   }
 
   function goTop(){
@@ -34,10 +35,10 @@ export default function Navbar() {
     {toggle && <div className=' w-full h-full left-0 right-0 top-0 bottom-0 fixed z-50 sm:hidden'>
       <FontAwesomeIcon icon={faX} className=' fixed right-6 top-6 text-xl cursor-pointer hover:text-blue-500' onClick={handleClick} />
       <ul className=' flex text-2xl flex-col justify-center items-center gap-4 font-bold sm:hidden w-full h-full bg-white z-50'>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>Home</li>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>About</li>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>Projects</li>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>Contact</li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150' onClick={handleClick}><a href="#home">Home</a></li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150' onClick={handleClick}><a href="#about">About</a></li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150' onClick={handleClick}><a href="#projects">Projects</a></li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150' onClick={handleClick}><a href="#contact">Contact</a></li>
       </ul>
     </div>}
   </div>
