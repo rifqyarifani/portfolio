@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
 import { faX } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import './App.css'
+
 
 export default function Navbar() {
 
@@ -12,15 +12,22 @@ export default function Navbar() {
     setToggle(toggle? false : true)
   }
 
+  function goTop(){
+    window.scrollTo({
+      top: (0,0),
+      behavior: 'smooth'
+    })
+  }
+
   return (
   <div>
     <div className=' flex justify-between items-center px-6 sm:px-12 py-6 font-bold border-b-2 border-opacity-10 top-0 fixed bg-white w-full z-20'>
-      <p className='text-xl'>Rifqy Arifani</p>
+      <p className='text-xl cursor-pointer'  onClick={goTop} >Rifqy Arifani</p>
       <ul className=' sm:flex gap-6 text-lg hidden'>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>Home</li>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>About</li>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>Projects</li>
-        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'>Contact</li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'><a href="#home">Home</a></li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'><a href="#about">About</a></li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'><a href="#projects">Projects</a></li>
+        <li className=' cursor-pointer hover:text-blue-500 transition duration-150'><a href="#contact">Contact</a></li>
       </ul>
       <FontAwesomeIcon icon={faBarsStaggered}  onClick={handleClick} className=' sm:hidden hover:text-blue-500 text-xl cursor-pointer'/>
     </div>
