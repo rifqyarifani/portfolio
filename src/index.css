@@ -28,3 +28,7 @@
 .animate-reverse:hover{
     transform: perspective(800px) rotateY(15deg) translateY(50px) scale(.9) rotateX(10deg);
 }
+
+.background {
+    background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245,245, 245, .8)),url(/public/background.svg);
+}
