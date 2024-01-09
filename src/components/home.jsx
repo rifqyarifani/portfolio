@@ -4,7 +4,9 @@ import html from "/html.svg";
 import css from "/css.svg";
 import js from "/js.svg";
 import react from "/react.svg";
-import tailwind from "/tailwind.png";
+import typescript from "/typescript.svg";
+import tailwind from "/tailwind.svg";
+import next from "/next.svg";
 
 export default function Home() {
   return (
@@ -44,6 +46,12 @@ export default function Home() {
             </div>
             <div className=" w-16 h-16 bg-white flex justify-center   items-center rounded-full">
               <img src={tailwind} alt="" className=" w-10" />
+            </div>
+            <div className=" w-16 h-16 bg-white flex justify-center   items-center rounded-full">
+              <img src={typescript} alt="" className=" w-10" />
+            </div>
+            <div className=" w-16 h-16 bg-white flex justify-center   items-center rounded-full">
+              <img src={next} alt="" className=" w-10" />
             </div>
           </div>
         </div>
